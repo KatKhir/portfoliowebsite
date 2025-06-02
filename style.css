@@ -1,0 +1,126 @@
+/*************** Reset *********************/
+* {
+  margin: 0rem;
+  padding: 0.4rem;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/******************************************* FARVER, STYLING & FONTE  *****************************************/
+
+/************** Custom properties **************/
+html {
+  /* farver */
+  --primary: #9cd7da;
+  --secondary: #b33333;
+  --tertiary: #000000;
+
+  /* fonte */
+  --font-heading: "Anton", sans-serif;
+  --font-body: "Libre Baskerville", serif;
+
+  /* font size - vw bruges til respnsivt design - 1vw svarer til 1% af bredden på din browser/visningsport (skærmen)*/
+  --h1-size: 13.7vw;
+  --h2-size: 8vw;
+  --h2-mmd-size: 4vw;
+  --h3-size: 4vw;
+  --h4-size: 4vw;
+}
+
+/******* H1 ********/
+h1 {
+  font-family: var(--font-heading);
+  font-size: var(--h1-size);
+  margin-bottom: -25px;
+}
+
+.outline_h1 {
+  color: transparent;
+  -webkit-text-stroke: 3px var(--secondary);
+}
+
+/******* H2 ********/
+h2 {
+  color: var(--secondary);
+  font-family: var(--font-heading);
+  font-size: var(--h2-size);
+}
+
+.h2_mmd_size {
+  font-size: var(--h2-mmd-size);
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+/******* H3 ********/
+h3 {
+  color: var(--tertiary);
+  font-family: var(--font-heading);
+  font-size: var(--h3-size);
+  margin-bottom: 15px;
+}
+
+/******* H4 ********/
+h4 {
+  color: var(--secondary);
+  font-family: var(--font-heading);
+  margin-bottom: -5px;
+  font-size: x-large;
+}
+
+/******* Tekst ********/
+p {
+  color: var(--tertiary);
+  font-family: var(--font-body);
+  margin-bottom: 10px;
+  font-size: larger;
+}
+
+/************************************ LINKS ***********************************/
+.link_style {
+  text-decoration: none;
+  font-family: var(--font-heading);
+  color: var(--tertiary);
+  font-size: 5vw;
+}
+
+/***************************************** BAGGRUND ******************************************/
+
+body {
+  background-color: var(--primary);
+}
+
+/****************************************** MAIN ********************************************/
+main {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+/****************************************** IMG **********************************************/
+
+.computer {
+  background-size: cover;
+}
+
+/********************************** PIL + ANIMATION ***************************************/
+
+/************************************************************ DESKTOP ***************************************************************/
+@media (min-width: 760px) {
+  /* skrifstørrelse på h4 og tekst */
+  h4 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: x-large;
+  }
+
+  /* h2 får left margin */
+  .h2_margin_left {
+    margin-left: 160px;
+  }
+}
