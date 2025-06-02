@@ -1,0 +1,58 @@
+/*************** Reset *********************/
+* {
+  margin: 0rem;
+  padding: 0.4rem;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/****************************************** MOBIL ******************************************************/
+
+/********************* Links og computer positionering ********************/
+.image-container {
+  position: relative;
+  width: 100%;
+  background-size: cover;
+}
+
+.image-container img {
+  width: 100%; /* billedet fylder hele containerens bredde */
+  height: auto;
+  display: block;
+}
+
+.image-link {
+  position: absolute;
+  display: block;
+  max-width: 700px;
+  bottom: 47%;
+  right: 15%;
+  width: 75%;
+}
+
+/****************************************** DESKTOP **************************************************/
+@media (min-width: 760px) {
+  /********************** Baggrund ************************/
+  body {
+    background-color: var(--primary);
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+  html {
+    background-color: rgb(255, 255, 255);
+    scroll-behavior: smooth;
+  }
+
+  /********************** Grid på forsiden ********************/
+
+  .grid_1-2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 50px;
+  }
+}
