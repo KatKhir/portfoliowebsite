@@ -48,11 +48,21 @@ img {
     scroll-behavior: smooth;
   }
 
-  /********************** Grid på forsiden ********************/
+  /********************** Grid ********************/
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 
   .grid_1-2 {
     display: grid;
     grid-template-columns: 1fr 2fr;
     margin-top: 50px;
+  }
+
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
   }
 }

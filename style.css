@@ -106,6 +106,15 @@ main {
   background-size: cover;
 }
 
+.img_hvid_kant {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 55px;
+  background-color: white;
+  margin-top: 20px;
+}
+
 /********************************** PIL + ANIMATION ***************************************/
 
 /************************************************************ DESKTOP ***************************************************************/
@@ -122,5 +131,9 @@ main {
   /* h2 får left margin */
   .h2_margin_left {
     margin-left: 160px;
+  }
+
+  .tekst_margin_top {
+    margin-top: 65px;
   }
 }
