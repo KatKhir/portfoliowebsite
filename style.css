@@ -24,11 +24,12 @@ html {
   --font-heading: "Anton", sans-serif;
   --font-body: "Libre Baskerville", serif;
 
-  /* font size - vw bruges til respnsivt design - 1vw svarer til 1% af bredden på din browser/visningsport (skærmen)*/
-  --h1-size: 13vw;
-  --h2-size: 7vw;
+  /* font size */
+  --h1-size: clamp(6rem, 12vw, 12rem);
+  --h1-Portfolio-size: clamp(4.5rem, 12vw, 12rem); /* clamp er en CSS-funktion, der begrænser en værdi mellem en minimum og en maksimum - vw gør at teksten følger med skærmstørrelsen*/
+  --h2-size: clamp(3rem, 6vw, 6rem);
   --h2-mmd-size: 4vw;
-  --h3-size: 4vw;
+  --h3-size: clamp(1.3rem, 4vw, 4rem);
   --h4-size: 4vw;
 }
 
@@ -36,6 +37,12 @@ html {
 h1 {
   font-family: var(--font-heading);
   font-size: var(--h1-size);
+  margin-bottom: -25px;
+}
+
+.h1_portfolio {
+  font-family: var(--font-heading);
+  font-size: var(--h1-Portfolio-size);
   margin-bottom: -25px;
 }
 
@@ -63,6 +70,7 @@ h3 {
   font-family: var(--font-heading);
   font-size: var(--h3-size);
   margin-bottom: 15px;
+  font-style: italic;
 }
 
 /******* H4 ********/
@@ -82,12 +90,24 @@ p {
   font-size: larger;
 }
 
+.p_emner {
+  font-family: var(--font-heading);
+  color: var(--tertiary);
+  font-weight: bold;
+  font-size: clamp(1.1rem, 3.5vw, 2.9rem);
+  font-style: italic;
+}
 /************************************ LINKS ***********************************/
 .link_style {
   text-decoration: none;
   font-family: var(--font-heading);
   color: var(--tertiary);
-  font-size: 5vw;
+  font-size: clamp(1.1rem, 3.5vw, 2.9rem);
+  font-weight: 400;
+}
+
+.link_style:hover {
+  color: var(--secondary);
 }
 
 /***************************************** BAGGRUND ******************************************/
@@ -179,7 +199,7 @@ main {
 
   /* h2 får left margin */
   .h2_margin_left {
-    margin-left: 160px;
+    margin-left: 255px;
   }
 
   /* skubber tekst ned så layoutet bliver diagonalt*/
