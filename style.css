@@ -113,8 +113,31 @@ main {
   padding-bottom: 55px;
   background-color: white;
   margin-top: 20px;
+  box-shadow: 0px 2px 3px black;
 }
 
+/*************************************** Knap *************************************************/
+
+.oval_knap {
+  display: inline-block;
+  background-color: white;
+  color: var(--secondary);
+  border: 3px solid var(--secondary);
+  padding: 30px 30px;
+  border-radius: 50%;
+  font-family: var(--font-heading);
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0px 1px 3px black;
+  justify-self: center;
+  align-self: start;
+}
+
+.oval_knap:hover {
+  background-color: var(--secondary);
+  color: white;
+}
 /********************************** PIL + ANIMATION ***************************************/
 
 /************************************************************ DESKTOP ***************************************************************/
@@ -133,7 +156,12 @@ main {
     margin-left: 160px;
   }
 
+  /* skubber tekst ned så layoutet bliver diagonalt*/
   .tekst_margin_top {
     margin-top: 65px;
+  }
+
+  .oval_knap {
+    margin-top: 100px;
   }
 }

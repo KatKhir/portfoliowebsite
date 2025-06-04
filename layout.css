@@ -52,6 +52,12 @@ img {
   .grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-top: 50px;
+  }
+
+  .grid_2-1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
   }
 
   .grid_1-2 {
