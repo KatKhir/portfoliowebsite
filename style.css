@@ -107,6 +107,10 @@ main {
   background-size: cover;
 }
 
+.img_outline {
+  outline: 1px solid black;
+}
+
 .img_hvid_kant {
   padding-left: 15px;
   padding-right: 15px;
