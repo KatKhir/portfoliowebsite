@@ -25,8 +25,8 @@ html {
   --font-body: "Libre Baskerville", serif;
 
   /* font size - vw bruges til respnsivt design - 1vw svarer til 1% af bredden på din browser/visningsport (skærmen)*/
-  --h1-size: 13.7vw;
-  --h2-size: 8vw;
+  --h1-size: 13vw;
+  --h2-size: 7vw;
   --h2-mmd-size: 4vw;
   --h3-size: 4vw;
   --h4-size: 4vw;
@@ -70,6 +70,7 @@ h4 {
   color: var(--secondary);
   font-family: var(--font-heading);
   margin-bottom: -5px;
+  margin-top: 10px;
   font-size: x-large;
 }
 
@@ -138,6 +139,27 @@ main {
   background-color: var(--secondary);
   color: white;
 }
+
+.oval_knap_2 {
+  display: inline-block;
+  background-color: white;
+  color: var(--secondary);
+  border: 3px solid var(--secondary);
+  padding: 30px 30px;
+  border-radius: 50%;
+  font-family: var(--font-heading);
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0px 1px 3px black;
+  justify-self: center;
+  align-self: start;
+}
+
+.oval_knap_2:hover {
+  background-color: var(--secondary);
+  color: white;
+}
 /********************************** PIL + ANIMATION ***************************************/
 
 /************************************************************ DESKTOP ***************************************************************/
@@ -163,5 +185,13 @@ main {
 
   .oval_knap {
     margin-top: 100px;
+  }
+
+  .oval_knap_2 {
+    margin-top: -32px;
+  }
+
+  .kamera_tema3 {
+    margin-top: -7px;
   }
 }
