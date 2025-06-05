@@ -16,21 +16,21 @@ img {
 /************** Custom properties **************/
 html {
   /* farver */
-  --primary: #9cd7da;
-  --secondary: #b33333;
-  --tertiary: #000000;
+  --primary: #9cd7da; /* baggrund */
+  --secondary: #b33333; /* overskrifter */
+  --tertiary: #000000; /* brødtekst */
 
   /* fonte */
-  --font-heading: "Anton", sans-serif;
-  --font-body: "Libre Baskerville", serif;
+  --font-heading: "Anton", sans-serif; /* Overskrifter */
+  --font-body: "Libre Baskerville", serif; /* Brødtekst */
 
   /* font size */
-  --h1-size: clamp(6rem, 12vw, 12rem);
-  --h1-Portfolio-size: clamp(4.5rem, 12vw, 12rem); /* clamp er en CSS-funktion, der begrænser en værdi mellem en minimum og en maksimum - vw gør at teksten følger med skærmstørrelsen*/
+  --h1-size: clamp(6rem, 12vw, 12rem); /* clamp er en CSS-funktion, der begrænser en værdi mellem en minimum og en maksimum */
+  --h1-Portfolio-size: clamp(4.5rem, 12vw, 12rem); /* min= 4.5rem og max= 12rem */
   --h2-size: clamp(3rem, 6vw, 6rem);
-  --h2-mmd-size: 4vw;
-  --h3-size: clamp(1.3rem, 4vw, 4rem);
-  --h4-size: 4vw;
+  --h2-mmd-size: clamp(1.8rem, 3vw, 3rem);
+  --h3-size: clamp(1.3rem, 3vw, 3rem);
+  --h4-size: 4vw; /* vw gør at teksten følger med skærmstørrelsen */
 }
 
 /******* H1 ********/
@@ -47,8 +47,8 @@ h1 {
 }
 
 .outline_h1 {
-  color: transparent;
-  -webkit-text-stroke: 3px var(--secondary);
+  color: transparent; /* gennemsigtig */
+  -webkit-text-stroke: 3px var(--secondary); /* den røde outline på h1 er 3 px bred */
 }
 
 /******* H2 ********/
@@ -67,10 +67,11 @@ h2 {
 /******* H3 ********/
 h3 {
   color: var(--tertiary);
-  font-family: var(--font-heading);
+  font-family: "Courier New", Courier, monospace;
   font-size: var(--h3-size);
-  margin-bottom: 15px;
-  font-style: italic;
+  margin-bottom: 20px;
+  margin-top: -15px;
+  font-weight: 600;
 }
 
 /******* H4 ********/
@@ -94,7 +95,7 @@ p {
   font-family: var(--font-heading);
   color: var(--tertiary);
   font-weight: bold;
-  font-size: clamp(1.1rem, 3.5vw, 2.9rem);
+  font-size: clamp(1.1rem, 2.8vw, 2.8rem);
   font-style: italic;
 }
 /************************************ LINKS ***********************************/
@@ -102,7 +103,7 @@ p {
   text-decoration: none;
   font-family: var(--font-heading);
   color: var(--tertiary);
-  font-size: clamp(1.1rem, 3.5vw, 2.9rem);
+  font-size: clamp(1.1rem, 2.8vw, 2.8rem);
   font-weight: 400;
 }
 
@@ -118,13 +119,13 @@ body {
 
 /****************************************** MAIN ********************************************/
 main {
-  max-width: 1300px;
-  margin: 0 auto;
+  max-width: 1300px; /* main fylder ikke hele computerskærmen ud og må max blive 1300 px bred - der er luft i siderne */
+  margin: 0 auto; /* margin øverst og nederst er 0 og venstre og højre er auto */
 }
 /****************************************** IMG **********************************************/
 
 .computer {
-  background-size: cover;
+  background-size: cover; /* sørger for: billedet fylder hele bredden og højden af elementet, bevarer proportioner og kan blive beskåret */
 }
 
 .img_outline {
@@ -132,7 +133,7 @@ main {
 }
 
 .img_hvid_kant {
-  padding-left: 15px;
+  padding-left: 15px; /* dette skal ligne en polaorid billede */
   padding-right: 15px;
   padding-top: 15px;
   padding-bottom: 55px;
@@ -186,9 +187,30 @@ main {
 }
 /********************************** PIL + ANIMATION ***************************************/
 
+.img_pil {
+  height: 170px;
+  width: auto;
+}
+
+.float-up-down {
+  animation: upDown 2s ease-in-out infinite;
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-45px);
+  } /* Går op */
+  100% {
+    transform: translateY(0);
+  } /* Tilbage ned */
+}
+
 /************************************************************ DESKTOP ***************************************************************/
 @media (min-width: 760px) {
-  /* skrifstørrelse på h4 og tekst */
+  /************************' skrifstørrelse på h4 og tekst */
   h4 {
     font-size: 3rem;
   }
@@ -197,16 +219,57 @@ main {
     font-size: x-large;
   }
 
-  /* h2 får left margin */
-  .h2_margin_left {
-    margin-left: 255px;
+  /************************* h2 får left margin */
+  .h2_margin_left_forside {
+    margin-left: 420px;
   }
 
-  /* skubber tekst ned så layoutet bliver diagonalt*/
-  .tekst_margin_top {
+  .h2_margin_left_2 {
+    margin-left: 299px;
+    margin-bottom: 50px;
+  }
+
+  .h2_margin_left_3 {
+    margin-left: 229px;
+    margin-bottom: 50px;
+  }
+
+  .h2_margin_left_4 {
+    margin-left: 61px;
+    margin-bottom: 50px;
+  }
+
+  .h2_margin_left_5 {
+    margin-left: 155px;
+    margin-bottom: 50px;
+  }
+
+  /******************** skubber tekst ned så layoutet bliver diagonalt*/
+  .tekst_margin_top2 {
     margin-top: 65px;
   }
 
+  .tekst_margin_top3 {
+    margin-top: 155px;
+  }
+  /********************* billede margin */
+
+  .img_tema3 {
+    margin-top: 60px;
+  }
+
+  .img_tema4 {
+    margin-top: 80px;
+  }
+
+  .img2_tema4 {
+    margin-top: -100px;
+  }
+
+  .img_tema5 {
+    margin-top: 80px;
+  }
+  /******************** Knapper */
   .oval_knap {
     margin-top: 100px;
   }
