@@ -133,13 +133,18 @@ main {
 }
 
 .img_hvid_kant {
-  padding-left: 15px; /* dette skal ligne en polaorid billede */
+  /* dette skal ligne en polaorid billede */
+  padding-left: 15px;
   padding-right: 15px;
   padding-top: 15px;
   padding-bottom: 55px;
   background-color: white;
   margin-top: 20px;
   box-shadow: 0px 2px 3px black;
+}
+
+.img_margin_top {
+  margin-top: 40px;
 }
 
 /*************************************** Knap *************************************************/
@@ -149,7 +154,7 @@ main {
   background-color: white;
   color: var(--secondary);
   border: 3px solid var(--secondary);
-  padding: 30px 30px;
+  padding: 40px 30px;
   border-radius: 50%;
   font-family: var(--font-heading);
   font-weight: bold;
@@ -165,26 +170,35 @@ main {
   color: white;
 }
 
-.oval_knap_2 {
-  display: inline-block;
-  background-color: white;
-  color: var(--secondary);
-  border: 3px solid var(--secondary);
-  padding: 30px 30px;
-  border-radius: 50%;
-  font-family: var(--font-heading);
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  box-shadow: 0px 1px 3px black;
-  justify-self: center;
-  align-self: start;
+/************* knap animation *****/
+/* @keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.09);
+    opacity: 1;
+  }
+} */
+
+.pulse-link {
+  display: inline-block; /* Så transform virker fint */
+  animation: pulse 1.5s infinite;
 }
 
-.oval_knap_2:hover {
-  background-color: var(--secondary);
-  color: white;
+/*********************************** STJERNE ANIMATION ******************************************/
+.rotating-image {
+  position: absolute;
+  top: 24%; /* vælg hvor billedet skal være */
+  right: 17%;
+  transform: translateX(-50%) rotate(0deg);
+  transition: transform 0s linear;
+  width: 100px;
+  height: auto;
 }
+
 /********************************** PIL + ANIMATION ***************************************/
 
 .img_pil {
@@ -250,7 +264,11 @@ main {
   }
 
   .tekst_margin_top3 {
-    margin-top: 155px;
+    margin-top: 80px;
+  }
+
+  .tekst_margin_top5 {
+    margin-top: 60px;
   }
   /********************* billede margin */
 
@@ -275,10 +293,54 @@ main {
   }
 
   .oval_knap_2 {
-    margin-top: -32px;
+    margin-top: 10px;
+    margin-left: 180px;
+    margin-bottom: 20px;
+  }
+
+  .oval_knap_3 {
+    margin-top: -5px;
+    margin-left: 200px;
+    margin-bottom: 10px;
+  }
+
+  .oval_knap_4 {
+    margin-top: 20px;
+    margin-left: 250px;
   }
 
   .kamera_tema3 {
     margin-top: -7px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /************* stjerne positioner i desktop format - måtte give dem en min-width på 1200px (bodyens max width) fordi stjerne flyttede position i min-width 760px*/
+  .stjerne1_position {
+    top: 38%;
+    right: 17%;
+    width: 130px;
+    height: auto;
+  }
+
+  .stjerne2_position {
+    top: 94%;
+    right: 27%;
+    width: 130px;
+    height: auto;
+  }
+
+  .stjerne3_position {
+    top: 90%;
+    right: 41%;
+    width: 130px;
+    height: auto;
+  }
+
+  .stjerne4_position {
+    top: 89%;
+    right: 35%;
+    width: 130px;
+    height: auto;
   }
 }
