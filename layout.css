@@ -45,17 +45,16 @@ img {
 
 /****************************************** DESKTOP **************************************************/
 @media (min-width: 760px) {
-  /********************** Baggrund ************************/
   body {
     background-color: var(--primary);
     max-width: 1200px;
-    margin-inline: auto;
+    margin: 0 auto;
   }
+
   html {
     background-color: rgb(255, 255, 255);
     scroll-behavior: smooth;
   }
-
   /********************** Grid ********************/
   .grid_1-1 {
     display: grid;
@@ -90,5 +89,116 @@ img {
 
   .img_pil {
     display: block;
+  }
+
+  /************************* h2 får left margin */
+  .h2_margin_left_forside {
+    margin-left: 420px;
+  }
+
+  .h2_margin_left_2 {
+    margin-left: 299px;
+    margin-bottom: 50px;
+  }
+
+  .h2_margin_left_3 {
+    margin-left: 229px;
+    margin-bottom: 50px;
+  }
+
+  .h2_margin_left_4 {
+    margin-left: 61px;
+    margin-bottom: 50px;
+  }
+
+  .h2_margin_left_5 {
+    margin-left: 155px;
+    margin-bottom: 50px;
+  }
+
+  /******************** skubber tekst ned så layoutet bliver diagonalt*/
+  .tekst_margin_top2 {
+    margin-top: 65px;
+  }
+
+  .tekst_margin_top3 {
+    margin-top: 80px;
+  }
+
+  .tekst_margin_top5 {
+    margin-top: 60px;
+  }
+  /********************* billede margin */
+
+  .img_tema3 {
+    margin-top: 60px;
+  }
+
+  .img_tema4 {
+    margin-top: 80px;
+  }
+
+  .img2_tema4 {
+    margin-top: -100px;
+  }
+
+  .img_tema5 {
+    margin-top: 80px;
+  }
+  /******************** Knapper */
+  .oval_knap {
+    margin-top: 100px;
+  }
+
+  .oval_knap_2 {
+    margin-top: 10px;
+    margin-left: 180px;
+    margin-bottom: 20px;
+  }
+
+  .oval_knap_3 {
+    margin-top: -5px;
+    margin-left: 200px;
+    margin-bottom: 10px;
+  }
+
+  .oval_knap_4 {
+    margin-top: 20px;
+    margin-left: 250px;
+  }
+
+  .kamera_tema3 {
+    margin-top: -7px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /************* stjerne positioner i desktop format - måtte give dem en min-width på 1200px (bodyens max width) fordi stjerne flyttede position i min-width 760px*/
+  .stjerne1_position {
+    top: 58%;
+    right: 17%;
+    width: 130px;
+    height: auto;
+  }
+
+  .stjerne2_position {
+    top: 114%;
+    right: 27%;
+    width: 130px;
+    height: auto;
+  }
+
+  .stjerne3_position {
+    top: 110%;
+    right: 41%;
+    width: 130px;
+    height: auto;
+  }
+
+  .stjerne4_position {
+    top: 109%;
+    right: 35%;
+    width: 130px;
+    height: auto;
   }
 }
