@@ -27,6 +27,7 @@ html {
   /* font size */
   --h1-size: clamp(6rem, 12vw, 12rem); /* clamp er en CSS-funktion, der begrænser en værdi mellem en minimum og en maksimum */
   --h1-Portfolio-size: clamp(4.5rem, 12vw, 12rem); /* min= 4.5rem og max= 12rem */
+  --h1-projekter-size: clamp(4rem, 12vw, 12rem);
   --h2-size: clamp(3rem, 6vw, 6rem);
   --h2-mmd-size: clamp(1.8rem, 3vw, 3rem);
   --h3-size: clamp(1.3rem, 3vw, 3rem);
@@ -44,6 +45,11 @@ h1 {
   font-family: var(--font-heading);
   font-size: var(--h1-Portfolio-size);
   margin-bottom: -25px;
+}
+
+.h1_projekter {
+  font-family: var(--font-heading);
+  font-size: var(--h1-projekter-size);
 }
 
 .outline_h1 {
@@ -117,11 +123,6 @@ body {
   background-color: var(--primary);
 }
 
-/****************************************** MAIN ********************************************/
-main {
-  max-width: 1300px; /* main fylder ikke hele computerskærmen ud og må max blive 1300 px bred - der er luft i siderne */
-  margin: 0 auto; /* margin øverst og nederst er 0 og venstre og højre er auto */
-}
 /****************************************** IMG **********************************************/
 
 .computer {
@@ -222,125 +223,124 @@ main {
   } /* Tilbage ned */
 }
 
+/****************************************** MENU *****************************************/
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
+
+.logo img {
+  width: 80px;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.menu a:hover {
+  color: var(--secondary);
+}
+
+.burger {
+  width: 50px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 1px;
+  background-color: #333333;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #ffffff;
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
+
 /************************************************************ DESKTOP ***************************************************************/
 @media (min-width: 760px) {
-  /************************' skrifstørrelse på h4 og tekst */
   h4 {
     font-size: 3rem;
   }
 
   p {
     font-size: x-large;
-  }
-
-  /************************* h2 får left margin */
-  .h2_margin_left_forside {
-    margin-left: 420px;
-  }
-
-  .h2_margin_left_2 {
-    margin-left: 299px;
-    margin-bottom: 50px;
-  }
-
-  .h2_margin_left_3 {
-    margin-left: 229px;
-    margin-bottom: 50px;
-  }
-
-  .h2_margin_left_4 {
-    margin-left: 61px;
-    margin-bottom: 50px;
-  }
-
-  .h2_margin_left_5 {
-    margin-left: 155px;
-    margin-bottom: 50px;
-  }
-
-  /******************** skubber tekst ned så layoutet bliver diagonalt*/
-  .tekst_margin_top2 {
-    margin-top: 65px;
-  }
-
-  .tekst_margin_top3 {
-    margin-top: 80px;
-  }
-
-  .tekst_margin_top5 {
-    margin-top: 60px;
-  }
-  /********************* billede margin */
-
-  .img_tema3 {
-    margin-top: 60px;
-  }
-
-  .img_tema4 {
-    margin-top: 80px;
-  }
-
-  .img2_tema4 {
-    margin-top: -100px;
-  }
-
-  .img_tema5 {
-    margin-top: 80px;
-  }
-  /******************** Knapper */
-  .oval_knap {
-    margin-top: 100px;
-  }
-
-  .oval_knap_2 {
-    margin-top: 10px;
-    margin-left: 180px;
-    margin-bottom: 20px;
-  }
-
-  .oval_knap_3 {
-    margin-top: -5px;
-    margin-left: 200px;
-    margin-bottom: 10px;
-  }
-
-  .oval_knap_4 {
-    margin-top: 20px;
-    margin-left: 250px;
-  }
-
-  .kamera_tema3 {
-    margin-top: -7px;
-  }
-}
-
-@media (min-width: 1200px) {
-  /************* stjerne positioner i desktop format - måtte give dem en min-width på 1200px (bodyens max width) fordi stjerne flyttede position i min-width 760px*/
-  .stjerne1_position {
-    top: 38%;
-    right: 17%;
-    width: 130px;
-    height: auto;
-  }
-
-  .stjerne2_position {
-    top: 94%;
-    right: 27%;
-    width: 130px;
-    height: auto;
-  }
-
-  .stjerne3_position {
-    top: 90%;
-    right: 41%;
-    width: 130px;
-    height: auto;
-  }
-
-  .stjerne4_position {
-    top: 89%;
-    right: 35%;
-    width: 130px;
-    height: auto;
   }
 }
