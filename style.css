@@ -192,7 +192,7 @@ body {
 /*********************************** STJERNE ANIMATION ******************************************/
 .rotating-image {
   position: absolute;
-  top: 24%; /* vælg hvor billedet skal være */
+  top: 47%; /* vælg hvor billedet skal være */
   right: 17%;
   transform: translateX(-50%) rotate(0deg);
   transition: transform 0s linear;
