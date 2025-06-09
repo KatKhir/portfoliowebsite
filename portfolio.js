@@ -1,11 +1,19 @@
 /************************** Stjerne rotation når man scroller ****************************/
-const image = document.querySelector(".rotating-image");
 
-window.addEventListener("scroll", () => {
+const image = document.querySelector(".rotating-image"); /* "find det billlede jeg vil rotere i min HTML" */
+
+/* Den indeholder alt, der skal ske, når man scroller eller loader siden */
+function handleScroll() {
+  if (!image) return;
   const scrollY = window.scrollY;
   const rotation = scrollY % 360;
   image.style.transform = `rotate(${rotation}deg)`;
-});
+}
+// Positionere elementet det givende sted ved load, så den ikke rykker sig når man begynder at scrolle (uden at elementet rotere ved load)
+window.addEventListener("load", handleScroll);
+
+// Opdaterer rotation når man scroller
+window.addEventListener("scroll", handleScroll);
 
 /******************************** MENU ***********************************/
 const burger = document.querySelector(".burger");

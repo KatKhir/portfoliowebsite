@@ -31,7 +31,7 @@ html {
   --h2-size: clamp(3rem, 6vw, 6rem);
   --h2-mmd-size: clamp(1.8rem, 3vw, 3rem);
   --h3-size: clamp(1.3rem, 3vw, 3rem);
-  --h4-size: 4vw; /* vw gør at teksten følger med skærmstørrelsen */
+  --h4-size: 4vw; /* vw står for viewport widht og gør at teksten følger med skærmstørrelsen */
 }
 
 /******* H1 ********/
@@ -189,6 +189,29 @@ body {
   animation: pulse 1.5s infinite;
 }
 
+/************ tilbage knap */
+
+.tilbage_knap {
+  display: inline-block;
+  background-color: #ffffff;
+  color: var(--secondary);
+  padding: 5px 5px 5px 5px;
+  font-family: var(--font-heading);
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0px 1px 3px black;
+  justify-self: center;
+  align-self: start;
+  margin-bottom: 20px;
+  margin-top: -20px;
+}
+
+.tilbage_knap:hover {
+  background-color: var(--secondary);
+  color: #ffffff;
+}
+
 /*********************************** STJERNE ANIMATION ******************************************/
 .rotating-image {
   position: absolute;
@@ -223,6 +246,88 @@ body {
   } /* Tilbage ned */
 }
 
+/*************************************** PROJEKTER BOKSE LINK **********************************************/
+
+.boks1 {
+  display: inline-block;
+  background-color: white;
+  color: var(--secondary);
+  border: 3px solid var(--secondary);
+  padding: 80px 60px 3px 3px;
+  font-family: var(--font-heading);
+  font-size: xx-large;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0px 1px 3px black;
+  align-self: start;
+  margin-bottom: 40px;
+  margin-top: 50px;
+}
+
+.boks1:hover {
+  background-color: var(--secondary);
+  color: #ffffff;
+}
+
+.boks2 {
+  display: inline-block;
+  background-color: white;
+  color: var(--secondary);
+  border: 3px solid var(--secondary);
+  padding: 80px 60px 3px 3px;
+  font-family: var(--font-heading);
+  font-size: xx-large;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0px 1px 3px black;
+  align-self: start;
+  margin-bottom: 40px;
+}
+
+.boks2:hover {
+  background-color: var(--secondary);
+  color: #ffffff;
+}
+
+.boks3 {
+  display: inline-block;
+  background-color: white;
+  color: var(--secondary);
+  border: 3px solid var(--secondary);
+  padding: 80px 60px 3px 3px;
+  font-family: var(--font-heading);
+  font-size: xx-large;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0px 1px 3px black;
+  align-self: start;
+  margin-bottom: 40px;
+}
+
+.boks3:hover {
+  background-color: var(--secondary);
+  color: #ffffff;
+}
+
+.boks4 {
+  display: inline-block;
+  background-color: white;
+  color: var(--secondary);
+  border: 3px solid var(--secondary);
+  padding: 80px 60px 3px 3px;
+  font-family: var(--font-heading);
+  font-size: xx-large;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0px 1px 3px black;
+  align-self: start;
+}
+
+.boks4:hover {
+  background-color: var(--secondary);
+  color: #ffffff;
+}
+
 /****************************************** MENU *****************************************/
 
 header {
@@ -235,6 +340,7 @@ header {
   background-color: #ffffff;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 50px;
+  z-index: 9999;
 }
 
 .logo img {
