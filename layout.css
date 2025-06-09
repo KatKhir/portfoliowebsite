@@ -65,6 +65,7 @@ img {
   .grid_2-1 {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    margin-top: 50px;
   }
 
   .grid_1-2 {
@@ -78,7 +79,25 @@ img {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
   }
+  /******************* projekter margin*/
 
+  .web {
+    margin-top: 50px;
+  }
+
+  .ux_ui {
+    margin-left: 140px;
+  }
+
+  .animation {
+    margin-left: 200px;
+  }
+
+  .indhold {
+    margin-left: 390px;
+  }
+
+  /********************** andet */
   .image-link {
     margin-bottom: 25px;
   }
@@ -185,35 +204,36 @@ img {
   .kamera_tema3 {
     margin-top: -7px;
   }
+  /*********** projekt bokse */
 }
 
 @media (min-width: 1200px) {
   /************* stjerne positioner i desktop format - måtte give dem en min-width på 1200px (bodyens max width) fordi stjerne flyttede position i min-width 760px*/
   .stjerne1_position {
-    top: 58%;
-    right: 17%;
-    width: 130px;
+    top: 57%;
+    left: 17%;
+    width: 150px;
     height: auto;
   }
 
   .stjerne2_position {
-    top: 114%;
+    top: 119%;
     right: 27%;
-    width: 130px;
+    width: 150px;
     height: auto;
   }
 
   .stjerne3_position {
-    top: 110%;
+    top: 112%;
     right: 41%;
-    width: 130px;
+    width: 150px;
     height: auto;
   }
 
   .stjerne4_position {
-    top: 109%;
+    top: 117%;
     right: 35%;
-    width: 130px;
+    width: 150px;
     height: auto;
   }
 
