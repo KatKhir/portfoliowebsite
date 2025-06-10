@@ -149,7 +149,7 @@ img {
   }
 
   .tekst_margin_top_mig {
-    margin-top: 60px;
+    margin-top: 90px;
   }
   /********************* billede margin */
 
@@ -169,7 +169,7 @@ img {
     margin-top: 80px;
   }
 
-  /******************* max width på mig */
+  /******************* max width og margin på mig */
   .img_mig {
     max-width: 600px;
     height: auto;
@@ -179,6 +179,12 @@ img {
     max-width: 700px;
     margin-left: 20px;
   }
+
+  .tekst_margin_om_mig {
+    margin-left: 400px;
+    margin-top: -20px;
+  }
+
   /******************** Knapper */
   .oval_knap {
     margin-top: 100px;
@@ -207,7 +213,7 @@ img {
   /*********** projekt bokse */
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   /************* stjerne positioner i desktop format - måtte give dem en min-width på 1200px (bodyens max width) fordi stjerne flyttede position i min-width 760px*/
   .stjerne1_position {
     top: 57%;
